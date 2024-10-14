@@ -22,7 +22,7 @@ jobs:
         run: yarn install
 
       - name: Compile
-        run: yarn build
+        run: yarn build:only
       
       - name: Publish 
         run: npm publish 

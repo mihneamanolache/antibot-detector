@@ -1,0 +1,63 @@
+{
+    "name": "@mihnea.dev/antibot-detector",
+    "description": "Detects if a website is using an anti-bot system. Based on the original wappalyzer files",
+    "version": "1.0.1",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mihneamanolache/antibot-detector.git"
+    },
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs"
+        }
+    },
+    "author": "Mihnea Octavian Manolache <mihnea.dev@gmail.com> (https://github.com/mihneamanolache/)",
+    "types": "./dist/index.d.ts",
+    "license": "MIT",
+    "scripts": {
+        "download": "rm -rf ./src/technologies && git clone git@github.com:pentesttoolscom/wappalyzer.git && mv wappalyzer/src/technologies ./src && rm -rf wappalyzer",
+        "test": "NODE_ENV=local TEST=true NODE_OPTIONS=--max_old_space_size=4096 mocha --timeout 60000 --exit",
+        "build": "yarn download && yarn test && yarn build:only",
+        "build:only": "rm -rf ./dist && tsup src/index.ts --format cjs,esm --dts --clean --onSuccess 'cp -r ./src/technologies ./dist'"
+    },
+    "dependencies": {
+        "playwright": "1.44"
+    },
+    "devDependencies": {
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
+        "@eslint/eslintrc": "^3.1.0",
+        "@eslint/js": "^9.12.0",
+        "@swc/core": "^1.7.35",
+        "@types/chai": "^5.0.0",
+        "@types/mocha": "^10.0.9",
+        "@types/node": "^22.7.5",
+        "@typescript-eslint/eslint-plugin": "^8.8.1",
+        "@typescript-eslint/parser": "^8.8.1",
+        "chai": "4.3.10",
+        "cross-env": "^7.0.3",
+        "eslint": "^9.12.0",
+        "eslint-config-prettier": "^9.1.0",
+        "globals": "^15.11.0",
+        "mocha": "^10.7.3",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.3.0",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.8.1"
+    },
+    "bugs": {
+        "url": "https://github.com/mihneamanolache/antibot-detector/issues"
+    },
+    "keywords": [
+        "wappalyzer",
+        "antibot-detector",
+        "antibot",
+        "webscraping"
+    ]
+}

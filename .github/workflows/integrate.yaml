@@ -34,7 +34,7 @@ jobs:
       - name: Run Tests
         run: yarn test
         env:
-          BROWSERLESS_HOST: 127.0.0.1
+          BROWSERLESS_HOST: localhost
           BROWSERLESS_PORT: 3000
 
       - name: Version Bump

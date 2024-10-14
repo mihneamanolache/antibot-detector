@@ -47,5 +47,5 @@ jobs:
           git config --local user.name "Mihnea Manolache"
           yarn version --patch
 
-      - name: Stop Browserless Docker container
-        run: docker stop browserless && docker rm browserless
+      # - name: Stop Browserless Docker container
+      #   run: docker stop browserless && docker rm browserless

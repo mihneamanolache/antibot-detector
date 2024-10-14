@@ -1,0 +1,504 @@
+{
+    "SolarWinds Security Event Manager": {
+      "cats": [
+        16
+      ],
+      "description": "SolarWinds SEM collects and normalizes log data generated across an entire network into one central location.",
+      "dom": {
+        "title": {
+          "text": "SolarWinds Security Event Manager"
+        }
+      },
+      "website": "https://www.solarwinds.com/"
+    },
+    "Zeroshell": {
+      "cats": [
+        45
+      ],
+      "description": "Zeroshell is a small open-source Linux distribution for servers and embedded systems which aims to provide network services.",
+      "dom": {
+        "title": {
+          "text": "ZeroShell"
+        }
+      },
+      "website": "https://distrowatch.com/table.php?distribution=zeroshell"
+    },
+    "WAGO": {
+      "cats": [
+        45
+      ],
+      "description": "WAGO GmbH & Co. KG is a German company that manufactures components for electrical connection technology and electronic components for automation technology.",
+      "html": "wagoSoftwareLicenseAgreement",
+      "website": "https://www.wago.com/global/"
+    },
+    "Roxy-WI": {
+      "cats": [
+        45
+      ],
+      "description": "Roxy-WI is an open source Graphical User Interface (GUI) for managing HAProxy, Nginx, Apache and Keepalived servers.",
+      "html": "Roxy-WI",
+      "website": "https://roxy-wi.org/"
+    },
+    "LoadMaster": {
+      "cats": [
+        93
+      ],
+      "description": "LoadMaster is a container loading software, which is easy to use and can help you plan loading online.",
+      "html": "LoadMaster",
+      "website": "https://loadmaster.biz/"
+    },
+    "TerraMaster TOS": {
+      "cats": [
+        28
+      ],
+      "description": "TerraMaster TOS is a web-based operating system specially designed for TerraMaster NAS that adopts a desktop, multi-functional user interface.",
+      "html": "<title>TOS",
+      "website": "https://www.terra-master.com/global/alltos/"
+    },
+    "PaperCut": {
+      "cats": [
+        45
+      ],
+      "description": "PaperCut is a print management software that is embedded on printers, photocopiers and MFDs to monitor and control an organisations print output.",
+      "html": "PaperCut",
+      "website": "https://www.papercut.com/"
+    },
+    "DotCMS": {
+      "cats": [
+        1
+      ],
+      "description": "DotCMS is a powerful universal content management system (uCMS) that enables a unified editor experience regardless of delivery.",
+      "headers": {
+        "Set-Cookie": "dotcms"
+      },
+      "cookies": {
+        "dotcms": ""
+      },
+      "html": "<img[^>]+src=\"[^\"]*/dotAsset/|<link[^>]+href=\"[^\"]*/dotAsset/|<a[^>]+href=\"[^h][^\"]*index\\.dot|dotCMS",
+      "website": "https://www.dotcms.com/"
+    },
+    "Oracle Business Intelligence": {
+      "cats": [
+        92
+      ],
+      "description": "Oracle Business Intelligence provides centralized data access and calculation.",
+      "html": "Oracle Business Intelligence",
+      "website": "https://www.oracle.com/business-analytics/business-intelligence/technologies/bi.html"
+    },
+    "Cacti": {
+      "cats": [
+        85
+      ],
+      "description": "Cacti provides a robust and extensible operational monitoring and fault management framework for users around the world.",
+      "html": "The Cacti Group",
+      "website": "https://www.cacti.net/"
+    },
+    "WSO2": {
+      "cats": [
+        69
+      ],
+      "description": "WSO2 is a single-tenant private cloud IAM solution that enables secure access for consumers, B2B SaaS applications, your workforce, or APIs.",
+      "html": "[0-9]+ - [0-9]+ WSO2 Inc",
+      "website": "https://wso2.com/"
+    },
+    "Netgear": {
+      "cats": [
+        16,
+        37
+      ],
+      "description": "Netgear provides networking, storage and security solutions.",
+      "headers": {
+        "WWW-Authenticate": "NETGEAR"
+      },
+      "website": "https://www.netgear.com/"
+    },
+    "Micro Focus OBM": {
+      "cats": [
+        85
+      ],
+      "description": "Micro Focus OBM is a universal event-correlation software that uses IT topology to automatically correlate related events for quicker and easier root-cause identification.",
+      "html": "/topaz/loginBanner\\.jsp",
+      "website": "https://www.microfocus.com/"
+    },
+    "Visual Tools DVR": {
+      "cats": [
+        20
+      ],
+      "html": "/slogin/enter\\.spy",
+      "website": "https://www.visual-tools.com/en/"
+    },
+    "MinIO": {
+      "cats": [
+        48
+      ],
+      "description": "MinIO is an object storage system. It is API compatible with the Amazon S3 cloud storage service.",
+      "html": "MinIO",
+      "website": "https://min.io/"
+    },
+    "Cisco UCS Director": {
+      "cats": [
+        63
+      ],
+      "description": "Cisco UCS Director is a heterogeneous platform for private cloud Infrastructure as a Service (IaaS).",
+      "html": "Cisco UCS Director",
+      "website": "https://www.cisco.com/"
+    },
+    "Cisco IMC Supervisor": {
+      "cats": [
+        45
+      ],
+      "description": "Cisco IMC Supervisor is a management system that allows you to manage rack-mount servers on a large scale.",
+      "html": "Cisco (IMC|Integrated Management Controller)( \\(IMC\\))? Supervisor",
+      "website": "https://www.cisco.com/"
+    },
+    "CentOS Web Panel": {
+      "cats": [
+        45
+      ],
+      "description": "CentOS Web Panel is a server administration software for Linux systems.",
+      "html": "Login to Control WebPanel",
+      "website": "https://centos-webpanel.com/"
+    },
+    "Palo Alto GlobalProtect": {
+      "cats": [
+        45
+      ],
+      "description": "The GlobalProtect portal manages your GlobalProtect infrastructure, distributing configuration information and controlling software distribution.",
+      "dom": {
+        "title": {
+          "text": "GlobalProtect Portal"
+        }
+      },
+      "website": "https://docs.paloaltonetworks.com/globalprotect"
+    },
+    "Cisco RV": {
+      "cats": [
+        37
+      ],
+      "html": "<title>.*VPN Router</title>|Cisco Systems",
+      "website": "https://www.cisco.com/"
+    },
+    "Cisco IOS XE": {
+      "cats": [
+        45
+      ],
+      "description": "Cisco IOS XE enables model-driven programmability, application hosting, and configuration management, automating day-to-day tasks.",
+      "html": "Cisco Systems, Inc.",
+      "website": "https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-xe/index.html"
+    },
+    "Cisco ASA": {
+      "cats": [
+        16
+      ],
+      "description": "The Cisco ASA Family of security devices protects corporate networks and data centers of all sizes.",
+      "html": [
+        "/\\+CSCOE\\+/logon.html",
+        "<title>Cisco Systems, Inc. Network Access</title>|<FORM ACTION=\"/netaccess/redirect\\.html\">\\s+<INPUT type=hidden name=sid VALUE="
+      ],
+      "headers": {
+        "server": "^Adaptive Security Appliance HTTP/1\\.1$"
+      },
+      "website": "https://www.cisco.com/c/en/us/products/security/adaptive-security-appliance-asa-software/index.html"
+    },
+    "Node-Red Dashboard": {
+      "cats": [
+        47
+      ],
+      "description": "The Node-RED Dashboard nodes provide a very intuitive and effective way to mock up user interfaces for event driven applications.",
+      "html": "id=\"red-ui-editor\"",
+      "website": "https://flows.nodered.org/node/node-red-dashboard"
+    },
+    "Fortinet FortiNAC": {
+      "cats": [
+        16
+      ],
+      "description": "FortiNAC is a network access control solution that enables organizations to easily manage their network access policies and ensure compliance with security policies.",
+      "html": "FortiNAC",
+      "website": "https://www.fortinet.com/products/network-access-control"
+    },
+    "Fortinet Fortigate": {
+      "cats": [
+        16
+      ],
+      "dom": {
+        "title": {
+          "text": "FortiGate"
+        }
+      },
+      "headers": {
+        "Server": "xxxxxxxx-xxxxx"
+      },
+      "website": "https://www.fortinet.com/products/next-generation-firewall"
+    },
+    "Sophos UTM": {
+      "cats": [
+        16
+      ],
+      "description": "Sophos UTM detects both known and unknown malware without relying on signatures.",
+      "html": "Sophos UTM",
+      "website": "https://www.sophos.com/"
+    },
+    "VMware vSphere": {
+      "cats": [
+        28
+      ],
+      "description": "VMware vSphere is VMware's cloud computing virtualization platform.",
+      "html": [
+        "<a class=\"btn btn-outline\" id=\"flex-login-button\" href=\"/vsphere-client/\">",
+        "<script type=\"text/javascript\">document.write(\"<title>\" + ID_VC_Welcome + \"</title>\");</script>|<meta name=\"description\" content=\"VMware vSphere is virtual infrastructure software for partitioning, consolidating and managing systems in mission-critical environments. VMware ESX Server provides a highly scalable platform with advanced resource management capabilities, which can be managed by vSphere.\">|<title>VMware Virtual Infrastructure Web Access</title>"
+      ],
+      "website": "https://docs.vmware.com/en/VMware-vSphere/index.html"
+    },
+    "VMware vRealize Operations Manager": {
+      "cats": [
+        95
+      ],
+      "description": "VMware vRealize is a purpose-built management solution for the heterogeneous data center and the hybrid cloud.",
+      "html": "vRealize Operations Manager|vRealize Operations",
+      "website": "https://docs.vmware.com/en/vRealize-Suite/index.html"
+    },
+    "Emlog": {
+      "cats": [
+        1
+      ],
+      "description": "Emlog is a lightweight blog and CMS website building system.",
+      "html": [
+        "Emlog",
+        "Warning.*expects parameter.*on line"
+      ],
+      "headers": {
+        "WWW-Authenticate": "Emlog"
+      },
+      "website": "https://github.com/emlog/emlog-ml"
+    },
+    "ManageEngine": {
+      "cats": [
+        95
+      ],
+      "description": "ManageEngine provides better visibility into all your organizational assets, resolves technical issues proactively, and allows agents greater control of their assets",
+      "html": [
+        "<title>ADAudit Plus</title>",
+        "<title>ManageEngine ServiceDesk Plus</title>|Help Desk Software by ManageEngine ServiceDesk Plus|ManageEngine SupportCenter Plus|AdManager Plus Authentication",
+        "ManageEngine Endpoint Central",
+        "Patch Manager Plus|www.patchmanagerplus.com|Vulnerability Manager Plus|http://www.vulnerabilitymanagerplus.com|Endpoint DLP Plus|http://endpointdlpplus.com",
+        "Password Manager Pro"
+      ],
+      "headers": {
+        "body": "ADS"
+      },
+      "website": "https://www.manageengine.com/"
+    },
+    "Solr Admin": {
+      "cats": [
+        3
+      ],
+      "description": "Solr is a search server built on top of Apache Lucene, an open source, Java-based, information retrieval library.",
+      "dom": {
+        "title": {
+          "text": "Solr Admin"
+        }
+      },
+      "website": "https://solr.apache.org/"
+    },
+    "Apache Druid": {
+      "cats": [
+        10
+      ],
+      "description": "Apache Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load.",
+      "dom": {
+        "title": {
+          "text": "Apache Druid"
+        }
+      },
+      "website": "https://druid.apache.org/"
+    },
+    "Apache Flink Web Dashboard": {
+      "cats": [
+        22
+      ],
+      "description": "Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams.",
+      "dom": {
+        "title": {
+          "text": "Apache Flink Web Dashboard"
+        }
+      },
+      "website": "https://flink.apache.org/"
+    },
+    "Apache APISIX": {
+      "cats": [
+        45
+      ],
+      "description": "Apache APISIX provides open source API Gateway to help you manage microservices.",
+      "headers": {
+        "Server": "APISIX"
+      },
+      "website": "https://flink.apache.org/"
+    },
+    "JSP": {
+      "cats": [
+        18
+      ],
+      "description": "JSP is a collection of technologies that helps software developers create dynamically generated web pages.",
+      "headers": {
+        "Set-Cookie": "JSESSIONID="
+      },
+      "cookies": {
+        "JSESSIONID": ""
+      },
+      "website": "https://www.tutorialspoint.com/jsp/index.htm"
+    },
+    "ASP": {
+      "cats": [
+        18
+      ],
+      "description": "ASP is Microsoft's first server-side scripting language and engine for dynamic web pages.",
+      "headers": {
+        "Set-Cookie": "ASPSESSIONID[A-Z]+="
+      },
+      "cookies": {
+        "ASPSESSIONID[A-Z]+=": ""
+      },
+      "website": "https://en.wikipedia.org/wiki/Active_Server_Pages"
+    },
+    "CloudPanel": {
+      "cats": [
+        1
+      ],
+      "description": "CloudPanel is a free software to configure and manage a server with an obsessive focus on simplicity.",
+      "dom": {
+        "title": {
+          "text": "CloudPanel | Log In"
+        }
+      },
+      "website": "https://www.cloudpanel.io/"
+    },
+    "Citrix": {
+      "cats": [
+        45,
+        47
+      ],
+      "description": "Citrix is a cloud computing and virtualization technology company that provides server, application and desktop virtualization, networking, software as a service, and cloud computing technologies.",
+      "dom": {
+        "title": {
+          "text": "Citrix Login"
+        }
+      },
+      "website": "https://www.citrix.com/"
+    },
+    "Check Point SSL Network Extender": {
+      "cats": [
+        37
+      ],
+      "description": "Check Point SSL Network Extender provides full network-level access for any IP-based application without installing software.",
+      "dom": {
+        "title": {
+          "text": "Check Point SSL Network Extender"
+        }
+      },
+      "website": "https://usercenter.checkpoint.com/uc/pmap/partners/resources/sslnetworkext/"
+    },
+    "SonicWall AMC": {
+      "cats": [
+        45
+      ],
+      "description": "AMC provides centralized access for managing security policies, configuring the system, distributing configuration data, monitoring, troubleshooting, and setting up administrator accounts.",
+      "dom": {
+        "title": {
+          "text": "Appliance Management Console Login"
+        }
+      },
+      "website": "https://www.sonicwall.com/"
+    },
+    "pfSense": {
+      "cats": [
+        37
+      ],
+      "description": "pfSense is a free and open source firewall and router that also features unified threat management, load balancing, multi WAN, and more.",
+      "dom": {
+        "title": {
+          "text": "pfSense - Login"
+        }
+      },
+      "website": "https://www.pfsense.org/"
+    },
+    "Oracle E-Business Suite": {
+      "cats": [
+        19
+      ],
+      "description": "Oracle E-Business Suite supports today's evolving business models, drives productivity, and meets the demands of the modern mobile user.",
+      "dom": {
+        "title": {
+          "text": "E-Business Suite Home Page Redirect"
+        }
+      },
+      "website": "https://www.oracle.com/applications/ebusiness/"
+    },
+    "OpenTSDB": {
+      "cats": [
+        34
+      ],
+      "description": "OpenTSDB is a distributed, scalable Time Series Database (TSDB) written on top of HBase.",
+      "dom": {
+        "title": {
+          "text": "OpenTSDB"
+        }
+      },
+      "website": "http://opentsdb.net/"
+    },
+    "MobileIron": {
+      "cats": [
+        45
+      ],
+      "description": "MobileIron is a mobile device management (MDM) system that provides ITS with a means of governing mobile access to WCM resources.",
+      "dom": {
+        "title": {
+          "text": "MobileIron User Portal: Sign In"
+        }
+      },
+      "website": "https://its.weill.cornell.edu/faq/what-is-mobileiron"
+    },
+    "Metabase": {
+      "cats": [
+        92
+      ],
+      "description": "Metabase is an open source tool that allows for powerful data instrumentation, visualization, and querying.",
+      "dom": {
+        "title": {
+          "text": "Metabase"
+        }
+      },
+      "website": "https://www.metabase.com/"
+    },
+    "Juniper": {
+      "cats": [
+        45
+      ],
+      "description": "Juniper Web Device Manager.",
+      "dom": {
+        "title": {
+          "text": "Juniper Web Device Manager allows you to monitor, configure, troubleshoot, and manage your device by means of a Web browser."
+        }
+      },
+      "website": "https://www.juniper.net/"
+    },
+    "Ivanti Connect Secure": {
+      "cats": [
+        19
+      ],
+      "description": "Ivanti Connect Secure is a seamless, cost-effective, remote access VPN solution for remote and mobile users from any web-enabled device to corporate resources.",
+      "dom": {
+        "title": {
+          "text": "Ivanti Connect Secure"
+        }
+      },
+      "website": "https://www.ivanti.com/"
+    },
+    "Spring Cloud Gateway": {
+      "cats": [
+        18
+      ],
+      "description": "Spring Cloud Gateway aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them.",
+      "html": "^(?=.*\\bgateway\\b)(?=.*\\bactuator\\b).*$",
+      "website": "https://spring.io/projects/spring-cloud-gateway"
+    }
+  }

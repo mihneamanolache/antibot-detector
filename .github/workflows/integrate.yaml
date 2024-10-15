@@ -25,9 +25,11 @@ jobs:
       - name: Compile TypeScript
         run: yarn tsc
 
-      - name: Run Puppeteer Action
+      - name: Test with browserless
         uses: jexniemi/browserless-action-runner@v0.1
         with:
           start_commands: |
             yarn test
-
+        env:
+          BROWSERLESS_HOST: localhost
+          BROWSERLESS_PORT: 3000

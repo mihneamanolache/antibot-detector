@@ -225,6 +225,25 @@ export interface PageData {
      * The URL of the page being analyzed.
      */
     url: string;
+
+    /**
+     * Metadata collected from the page.
+     * This can include various information such as the status code, headers, and cookies.
+     * 
+     * The metadata is structured as key-value pairs where the key is a string, and the value can be of any type.
+     * 
+     * @example
+     * {
+     *   "status_code": 200,
+     *   "headers": {
+     *     "content-type": "text/html"
+     *   },
+     *   "cookies": [
+     *     { "name": "sessionId", "value": "abc123" }
+     *   ]
+     * }
+     */
+    metadata: Record<string, unknown>;
 }
 
 /**
@@ -239,4 +258,10 @@ export interface AntiBotResults {
      * Array of other detected technologies.
      */
     other: Array<Detection> 
+
+    /**
+     * Metadata collected from the page.
+     * This can include various information such as the status code, headers, and cookies.
+     */ 
+    metadata: Record<string, unknown>;
 }

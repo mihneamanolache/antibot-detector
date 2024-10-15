@@ -117,6 +117,45 @@ class LocalAntiBotDetector extends AntiBotDetector {
 });
 ```
 
+## Output
+
+The `run` method of **AntiBotDetector** returns a structured result that provides detailed information on detected technologies and metadata. The result is of type `AntiBotResults`, which consists of three main parts: `antiBot` (detected anti-bot technologies), `other` (other detected technologies), and `metadata` (page-specific metadata like status code, headers, etc.).
+
+```json
+{
+  "antiBot": [
+    {
+      "name": "reCAPTCHA",
+      "pattern": { "type": "headers", "pattern": "some-pattern" },
+      "version": undefined,
+      "confidence": 100
+    }
+  ],
+  "other": [
+    {
+      "name": "HSTS",
+      "pattern": { "type": "headers", "pattern": "some-pattern" },
+      "version": undefined,
+      "confidence": 100
+    },
+  ],
+  "metadata": {
+    "url": "https://www.google.com/recaptcha/api2/demo",
+    "status_code": 200,
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "expires": "Tue, 15 Oct 2024 07:15:33 GMT",
+      "date": "Tue, 15 Oct 2024 07:15:33 GMT",
+      "cache-control": "private, max-age=0",
+      "content-security-policy": "script-src 'nonce-dwyegxnaEljCgcb1Bt7Lyw' ...",
+      "server": "ESF",
+      "x-firefox-spdy": "h2"
+    },
+    "cookies": []
+  }
+}
+```
+
 ## Detection Criteria
 
 AntiBotDetector uses multiple signals to detect anti-bot technologies:

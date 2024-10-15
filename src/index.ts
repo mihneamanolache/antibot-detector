@@ -335,15 +335,21 @@ export default class AntiBotDetector {
                 });
             });
 
-            await page.goto(url, { waitUntil: 'networkidle' });
+            const response: Response | null = await page.goto(url, { waitUntil: 'networkidle' });
 
             const cookies: Array<Cookie> = await context.cookies();
             const content: string = await page.content();
             const jsVariables: Record<string, unknown> = await this.collectJavaScriptVariables(page, technologies);
             const metaTags: Record<string, string> = await this.collectMetaTags(page);
             const domMatches: Array<string> = await this.collectDOMElements(page, technologies);
+            const metadata: Record<string, unknown> = {
+                url: response?.url(),
+                status_code: response?.status(),
+                headers: response?.headers(),
+                cookies: cookies,
+            }
 
-            return { requestData, responseData, cookies, content, url, jsVariables, metaTags, domMatches };
+            return { requestData, responseData, cookies, content, url, jsVariables, metaTags, domMatches, metadata };
         } finally {
             await page?.close();
             await context?.close();
@@ -452,7 +458,7 @@ export default class AntiBotDetector {
             }
         }
 
-        return { antiBot: antiBotDetections, other: otherDetections };
+        return { antiBot: antiBotDetections, other: otherDetections, metadata: data.metadata };
     }
 
     /**

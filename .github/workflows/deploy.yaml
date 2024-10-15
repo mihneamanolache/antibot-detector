@@ -34,7 +34,7 @@ jobs:
         run: yarn version --patch
       
       - name: Stage version bump
-        run: git add package.json yarn.lock
+        run: git add -A .
 
       - name: Commit version bump
         run: |

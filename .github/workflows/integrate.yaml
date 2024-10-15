@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Compile TypeScript
-        run: yarn tsc
-
       - name: Test with browserless
         uses: jexniemi/browserless-action-runner@v0.1
         with:

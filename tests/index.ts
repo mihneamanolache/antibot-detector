@@ -1,8 +1,9 @@
 import { expect } from "chai";
 import AntiBotDetector from "../src";
 import { type AntiBotResults } from "../src/index.types";
+import { chromium } from "playwright";
 
-const antiBotDetector: AntiBotDetector = new AntiBotDetector();
+const antiBotDetector: AntiBotDetector = new AntiBotDetector(chromium);
 
 describe("Detect Antibot Providers", (): void => {
     it("reCAPTCHA", async (): Promise<void> => {

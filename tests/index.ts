@@ -8,7 +8,6 @@ const antiBotDetector: AntiBotDetector = new AntiBotDetector(chromium);
 describe("Detect Antibot Providers", (): void => {
     it("reCAPTCHA", async (): Promise<void> => {
         const res: AntiBotResults = await antiBotDetector.run("https://www.google.com/recaptcha/api2/demo");
-        console.log(res)
         expect(res.antiBot.some((a): boolean => {
             return a.name === "reCAPTCHA" && a.pattern.type === "scripts"
         })).to.equal(true);

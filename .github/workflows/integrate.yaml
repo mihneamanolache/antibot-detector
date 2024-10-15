@@ -2,24 +2,19 @@ name: Continuous Integration
 
 on:
   pull_request:
-    branches:
-      - main
-    types:
-      - closed
+    branches: [main]
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [20.x]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -27,19 +22,29 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Bump version 
-        run: yarn version --minor
+      - name: Test with browserless
+        uses: jexniemi/browserless-action-runner@v0.1
+        with:
+          start_commands: |
+            yarn test
+        env:
+          BROWSERLESS_HOST: localhost
+          BROWSERLESS_PORT: 3000
+
+      - name: Set up Git for commit
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+
+      - name: Bump version
+        run: yarn version --patch
 
       - name: Stage version bump
         run: git add package.json yarn.lock
 
       - name: Commit version bump
-        run: git commit -m "Version bump 🆙"
+        run: |
+          git commit -m "ci: bump version to $(cat package.json | jq -r .version)"
 
       - name: Push changes
         run: git push origin HEAD:${{ github.ref }}
-
-      - name: Publish to NPM
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

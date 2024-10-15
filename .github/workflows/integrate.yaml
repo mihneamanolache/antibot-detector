@@ -1,3 +1,9 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches: [ main ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -43,11 +49,6 @@ jobs:
       - name: Remove Docker network
         run: docker network rm browserless-network
 
-      - name: Stop and remove Browserless Docker container
-        run: |
-          docker stop browserless
-          docker rm browserless
-      
       - name: Version Bump
         run: | 
           git config --local user.email "mihnea.dev@gmail.com"
@@ -56,4 +57,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GTOKEN }}
 
+      - name: Stop and remove Browserless Docker container
+        run: |
+          docker stop browserless
+          docker rm browserless
 

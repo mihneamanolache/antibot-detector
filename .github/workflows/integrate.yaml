@@ -23,29 +23,34 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      # - name: Log in to Docker Hub
-      #   run: |
-      #     echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Log in to Docker Hub
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      # - name: Start Browserless Docker container
-      #   run: |
-      #     docker run -d --name browserless -p 3000:3000 browserless/chrome:latest
+      - name: Start Browserless Docker container
+        run: |
+          docker run -d --name browserless -p 3000:3000 browserless/chrome:latest
 
-      # - name: Wait for Browserless to be ready
-      #   run: |
-      #     until curl -s http://localhost:3000; do echo "Waiting for browserless..."; sleep 3; done
+      - name: Wait for Browserless to be ready
+        run: |
+          until curl -s http://localhost:3000; do echo "Waiting for browserless..."; sleep 5; done
 
-      # - name: Run Tests
-      #   run: yarn test
-      #   env:
-      #     BROWSERLESS_HOST: localhost
-      #     BROWSERLESS_PORT: 3000
+      - name: Run Tests
+        run: yarn test
+        env:
+          BROWSERLESS_HOST: localhost
+          BROWSERLESS_PORT: 3000
 
       - name: Version Bump
         run: | 
           git config --local user.email "mihnea.dev@gmail.com"
           git config --local user.name "Mihnea Manolache"
           yarn version --patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GTOKEN }}
 
-      # - name: Stop Browserless Docker container
-      #   run: docker stop browserless && docker rm browserless
+      - name: Stop and remove Browserless Docker container
+        run: |
+          docker stop browserless
+          docker rm browserless
+

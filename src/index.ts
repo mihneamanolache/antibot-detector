@@ -286,7 +286,7 @@ export default class AntiBotDetector {
         }
         const browser: Browser = await this._BrowserType.connect(
             `ws://${browserless.host}:${browserless.port}/${this._BrowserType.name()}/playwright?blockAds=true&launch=${JSON.stringify(this._LaunchOptions)}`, 
-            { timeout: 5_000 });
+            { timeout: 25_000 });
         return browser;
     }
 

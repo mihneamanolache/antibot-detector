@@ -1,7 +1,7 @@
 {
     "name": "@mihnea.dev/antibot-detector",
     "description": "Detects if a website is using an anti-bot system. Based on the original wappalyzer files",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "files": [

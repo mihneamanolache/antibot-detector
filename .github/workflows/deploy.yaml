@@ -24,15 +24,19 @@ jobs:
       - name: Compile
         run: yarn build:only
 
+      # Set up Git user identity for committing
+      - name: Set up Git for commit
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+
       - name: Bump version
         run: yarn version --patch
       
       - name: Commit version bump
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
           git add package.json yarn.lock
-          git commit -m "ci: bump version [skip ci]"
+          git commit -m "ci: bump version to $(cat package.json | jq -r .version)"
 
       - name: Push changes
         run: git push origin HEAD:${{ github.ref }}

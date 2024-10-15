@@ -285,8 +285,8 @@ export default class AntiBotDetector {
             throw new Error('BROWSERLESS_HOST and BROWSERLESS_PORT environment variables must be set. Should you wish to launch a local browser, you can override the `launchBrowser` method.');
         }
         const browser: Browser = await this._BrowserType.connect(
-            `ws://${browserless.host}:${browserless.port}/${this._BrowserType.name()}/playwright?blockAds=true&launch=${JSON.stringify(this._LaunchOptions)}`, 
-            { timeout: 5_000 });
+            `ws://${browserless.host}:${browserless.port}/${this._BrowserType.name()}/playwright?launch=${JSON.stringify(this._LaunchOptions)}`,
+            { timeout: 25_000 });
         return browser;
     }
 
